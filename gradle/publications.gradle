@@ -4,13 +4,13 @@ apply plugin: "maven-publish"
 String repoUsername = properties["repoUsername"]
 String repoPassword = properties["repoPassword"]
 
-publishing.publications.withType(MavenPublication.class) {
+publishing.publications.withType(MavenPublication.class).configureEach {
   pom {
     afterEvaluate {
       name = project.name
       description = project.description
     }
-    url = "https://github.com/TAKETODAY/today-orm"
+    url = "https://github.com/today-tech/today-retry"
     organization {
       name = "TODAY Tech"
       url = "https://taketoday.cn"
@@ -23,20 +23,20 @@ publishing.publications.withType(MavenPublication.class) {
       }
     }
     scm {
-      url = "https://github.com/TAKETODAY/today-orm.git"
-      connection = "scm:git:git://github.com/TAKETODAY/today-orm"
-      developerConnection = "scm:git:git://github.com/TAKETODAY/today-orm"
+      url = "https://github.com/today-tech/today-retry.git"
+      connection = "scm:git:git://github.com/today-tech/today-retry"
+      developerConnection = "scm:git:git://github.com/today-tech/today-retry"
     }
     developers {
       developer {
         id = "taketoday"
-        name = "Harry Yang"
+        name = "海子 Yang"
         email = "i.take.today@gmail.com"
       }
     }
     issueManagement {
       system = "GitHub"
-      url = "https://github.com/TAKETODAY/today-orm/issues"
+      url = "https://github.com/today-tech/today-retry/issues"
     }
   }
   versionMapping {
