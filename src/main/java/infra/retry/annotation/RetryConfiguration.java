@@ -18,6 +18,7 @@
 package infra.retry.annotation;
 
 import org.aopalliance.aop.Advice;
+import org.jspecify.annotations.Nullable;
 
 import java.io.Serial;
 import java.lang.annotation.Annotation;
@@ -49,7 +50,6 @@ import infra.core.OrderComparator;
 import infra.core.annotation.AnnotationAttributes;
 import infra.core.annotation.AnnotationUtils;
 import infra.core.type.AnnotationMetadata;
-import infra.lang.Nullable;
 import infra.retry.RetryListener;
 import infra.retry.backoff.Sleeper;
 import infra.retry.interceptor.MethodArgumentsKeyGenerator;
@@ -119,7 +119,7 @@ public class RetryConfiguration extends AbstractPointcutAdvisor implements Intro
 
   @Nullable
   private <T> List<T> findBeans(Class<? extends T> type) {
-    if (!beanFactory.getBeanNamesForType(type).isEmpty()) {
+    if (ObjectUtils.isNotEmpty(beanFactory.getBeanNamesForType(type))) {
       ArrayList<T> list = new ArrayList<>(beanFactory.getBeansOfType(type, false, false).values());
       OrderComparator.sort(list);
       return list;
@@ -129,7 +129,7 @@ public class RetryConfiguration extends AbstractPointcutAdvisor implements Intro
 
   @Nullable
   private <T> T findBean(Class<? extends T> type) {
-    if (beanFactory.getBeanNamesForType(type, false, false).size() == 1) {
+    if (beanFactory.getBeanNamesForType(type, false, false).length == 1) {
       return beanFactory.getBean(type);
     }
     return null;

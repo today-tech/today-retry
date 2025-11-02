@@ -16,7 +16,7 @@
  */
 package infra.retry.interceptor;
 
-import infra.lang.Nullable;
+import org.jspecify.annotations.Nullable;
 
 /**
  * Interface that allows method parameters to be identified and tagged by a unique key.

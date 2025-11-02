@@ -22,7 +22,7 @@ import java.io.Serializable;
 /**
  * Interface for a classifier. At its simplest a {@link Classifier} is just a map from
  * objects of one type to objects of another type.
- *
+ * <p>
  * Note that implementations can only be serializable if the parameter types are
  * themselves serializable.
  *

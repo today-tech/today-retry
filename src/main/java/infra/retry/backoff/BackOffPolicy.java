@@ -17,7 +17,8 @@
 
 package infra.retry.backoff;
 
-import infra.lang.Nullable;
+import org.jspecify.annotations.Nullable;
+
 import infra.retry.RetryContext;
 import infra.retry.support.RetryTemplate;
 

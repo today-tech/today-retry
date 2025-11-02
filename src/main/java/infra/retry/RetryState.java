@@ -16,7 +16,7 @@
  */
 package infra.retry;
 
-import infra.lang.Nullable;
+import org.jspecify.annotations.Nullable;
 
 /**
  * Stateful retry is characterised by having to recognise the items that are being

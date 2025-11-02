@@ -17,6 +17,8 @@
 
 package infra.retry.annotation;
 
+import org.jspecify.annotations.Nullable;
+
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -25,7 +27,6 @@ import java.util.Map;
 
 import infra.classify.SubclassClassifier;
 import infra.core.annotation.AnnotatedElementUtils;
-import infra.lang.Nullable;
 import infra.retry.ExhaustedRetryException;
 import infra.retry.RetryContext;
 import infra.retry.interceptor.MethodInvocationRecoverer;

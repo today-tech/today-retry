@@ -21,9 +21,7 @@
  * @author <a href="https://github.com/TAKETODAY">Harry Yang</a>
  * @since 4.0 2022/7/26 17:29
  */
-@NonNullApi
-@NonNullFields
+@NullMarked
 package infra.retry;
 
-import infra.lang.NonNullApi;
-import infra.lang.NonNullFields;
+import org.jspecify.annotations.NullMarked;

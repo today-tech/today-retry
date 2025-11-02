@@ -17,8 +17,9 @@
 
 package infra.classify;
 
+import org.jspecify.annotations.Nullable;
+
 import infra.classify.util.MethodInvoker;
-import infra.lang.Nullable;
 
 /**
  * Wrapper for an object to adapt it to the {@link Classifier} interface.

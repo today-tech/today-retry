@@ -17,11 +17,12 @@
 
 package infra.retry.stats;
 
+import org.jspecify.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import infra.lang.Nullable;
 import infra.retry.RetryStatistics;
 
 /**

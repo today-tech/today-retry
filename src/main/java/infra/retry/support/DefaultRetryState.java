@@ -16,8 +16,9 @@
  */
 package infra.retry.support;
 
+import org.jspecify.annotations.Nullable;
+
 import infra.classify.Classifier;
-import infra.lang.Nullable;
 import infra.retry.RecoveryCallback;
 import infra.retry.RetryCallback;
 import infra.retry.RetryOperations;

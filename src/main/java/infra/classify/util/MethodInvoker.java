@@ -17,6 +17,8 @@
 
 package infra.classify.util;
 
+import org.jspecify.annotations.Nullable;
+
 import java.lang.annotation.Annotation;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
@@ -27,7 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import infra.aop.framework.Advised;
 import infra.core.annotation.AnnotationUtils;
 import infra.lang.Assert;
-import infra.lang.Nullable;
 import infra.util.ObjectUtils;
 import infra.util.ReflectionUtils;
 

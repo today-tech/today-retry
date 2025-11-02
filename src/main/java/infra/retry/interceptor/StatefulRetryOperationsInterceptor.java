@@ -19,12 +19,12 @@ package infra.retry.interceptor;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
+import org.jspecify.annotations.Nullable;
 
 import java.util.Arrays;
 
 import infra.classify.Classifier;
 import infra.lang.Assert;
-import infra.lang.Nullable;
 import infra.logging.Logger;
 import infra.logging.LoggerFactory;
 import infra.retry.RecoveryCallback;
